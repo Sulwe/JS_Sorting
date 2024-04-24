@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion sort</title>
+</head>
+<body>
+    <h1>Insertion Sort</h1>
+    <script>
+
+        let aray = [];
+        let cont = prompt("Please Enter Your Array of Numbers: ");
+        console.log(typeof(cont));
+        aray = cont.split(',');
+        console.log(aray);
+
+        let arr = [];
+
+        for (let y = 0; y < aray.length; y ++){
+            arr.push(parseInt(aray[y]));
+        }
+        console.log(arr);
+        
+        let n = arr.length;
+
+        function insertionSort(arr, n) {
+            for(let i = 0; i < n; i++){
+                let temp = arr[i];
+                let j;
+                for (j = i - 1; j >= 0 && arr[j] > temp; j--) {
+                    arr[j + 1] = arr[j];
+                }
+                arr[j + 1] = temp;
+                }
+            }
+
+        console.log(`Input array: ${arr}`);
+        insertionSort(arr, n)
+        console.log(`Sorted array: ${arr}`);
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
