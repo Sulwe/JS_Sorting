@@ -24,7 +24,7 @@
         
         let n = arr.length;
 
-        function bubbleSort(arr, n) {
+        function selectionSort(arr, n) {
             for(let i = 0; i < n - 1; i++){
                 for(let j = i + 1; j < n; j++){
                     if (arr[i] > arr[j]){
@@ -36,7 +36,7 @@
             }
         }
         console.log(`Input array: ${arr}`);
-        bubbleSort(arr, n)
+        selectionSort(arr, n)
         console.log(`Sorted array: ${arr}`);
         
 
