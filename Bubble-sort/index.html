@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bubble Sort</h1>
+    <script>
+
+        let aray = [];
+        let cont = prompt("Please Enter Your Array of Numbers: ");
+        console.log(typeof(cont));
+        aray = cont.split(',');
+        console.log(aray);
+
+        let arr = [];
+
+        for (let y = 0; y < aray.length; y ++){
+            arr.push(parseInt(aray[y]));
+        }
+        console.log(arr);
+        
+        let n = arr.length;
+
+        function bubbleSort(arr, n) {
+            for(let i = 0; i < n - 1; i++){
+                for(let j = 0; j < n - 1; j++){
+                    if (arr[j] > arr[j + 1]){
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+        }
+        console.log(`Input array: ${arr}`);
+        bubbleSort(arr, n)
+        console.log(`Sorted array: ${arr}`);
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
